@@ -1,66 +1,25 @@
 <!DOCTYPE html>
-<html lang='en'>
-<head>
-	<meta charset='utf-8'>
-	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
-	<meta name='viewport' content='width=device-width, initial-scale=1' />
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Kunanyi</title>
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+        <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet" />
+        <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    </head>
+    <body>
+        <div id="map" style="width: 100%; height: 100vh; position: fixed; top: 0"></div>
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoidnVsa2QiLCJhIjoiY2l2MjJ0bjY4MDE4ZjJ0cW9najE0MW0wayJ9.IOY253HZ-zQBvu-F14Jp-g';
 
-	<meta name='twitter:card' content='summary_large_image'>
-	<meta name='twitter:site' content='https://apps.apple.com/au/app/kunanyi/id6450945584'>
-	<meta name='twitter:title' content='Kunanyi'>
-	<meta name='twitter:description' content=''>
-	<meta name='twitter:image' content='https://vulkd.github.io/kunanyi/logo.png'>
-
-	<meta property='og:type' content='website'>
-	<meta property='og:title' content='Kunanyi'>
-	<meta property='og:site_name' content='Kunanyi'>
-	<meta property='og:url' content='https://apps.apple.com/au/app/kunanyi/id6450945584'>
-	<meta property='og:description' content=''>
-	<meta property='og:image' content='https://vulkd.github.io/kunanyi/logo.png'>
-	<meta property='og:image:alt' content='Kunanyi'>
-
-	<link rel="icon" type="image/png" href="favicon.png">
-
-	<title>Kunanyi</title>
-
-	<style>
-    html {
-      max-width: 70ch;
-      /* larger spacing on larger screens, very small spacing on tiny screens */
-      padding: calc(1vmin + .5rem);
-      /* shorthand for margin-left/margin-right */
-      margin-inline: auto;
-      /* fluid sizing: https://frontaid.io/blog/fluid-typography-2d-css-locks-clamp/ */
-      font-size: clamp(1em, 0.909em + 0.45vmin, 1.25em);
-      /* use system font stack: https://developer.mozilla.org/en-US/docs/Web/CSS/font-family */
-      font-family: system-ui
-    }
-
-    body :not(:is(h1,h2,h3,h4,h5,h6)) {
-      line-height: 1.75;
-    }
-
-    img {
-    	max-width: 128px;
-    	border-radius: 1rem;
-    }
-
-    hr {
-    	margin: 5rem auto;
-    }
-
-	</style>
-</head>
-<body>
-	<img src='favicon.png' alt='Kunanyi'/>
-	<h1>Kunanyi</h1>
-	<i>Stay connected to the mountain with webcam views of the summit, road closure status, and an interactive map to explore. Show data in near-real time with widgets.</i>
-	<br>
-	<a href="https://apps.apple.com/au/app/kunanyi/id6450945584">Download</a>
-	<hr>
-	<h2>Privacy Policy</h2>
-	<p>This page is used to inform visitors regarding policies with the collection, use, and disclosure of Personal Information if anyone decides to use the app.</p><p>I will not use or share your information with anyone except as described in this Privacy Policy. I do not knowingly collect personally identifiable information. I will notify of any changes to this policy via update notes to the app.</p><p>This policy is effective as of 2023-07-01.</p>
-
-</main>
-</body>
+            const map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/vulkd/clob7ow36007o01r7ex883cip',
+                center: [147.24048963124966, -42.90197344051096],
+                zoom: 13.605988390110955,
+                bearing: 294.9527076295715,
+                pitch: 66.74999999999982,
+            });
+        </script>
+    </body>
 </html>
